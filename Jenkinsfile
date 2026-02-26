@@ -63,10 +63,10 @@ EOF
 
     post {
         success {
-            echo "✅ DEPLOYMENT SUCCESSFUL → http://${EC2_IP}:3000"
+            echo " DEPLOYMENT SUCCESSFUL → http://${EC2_IP}:3000"
         }
-        failure {
-            echo "❌ DEPLOYMENT FAILED — Check Jenkins logs"
+        failure 
+            echo " DEPLOYMENT FAILED — Check Jenkins logs"
         }
     }
 }
