@@ -24,7 +24,7 @@ pipeline {
 
         stage('Run Unit Tests') {
             steps {
-                dir('my-Backend-app') {
+                dir('Backend-app') {
                     sh 'npm test'
                 }
             }
@@ -32,7 +32,7 @@ pipeline {
 
         stage('Deploy to EC2') {
             steps {
-                sshagent(['shhagent']) {
+                sshagent(['sshagent']) {
                     sh """
                     ssh -q -o StrictHostKeyChecking=no ubuntu@${EC2_IP} << 'EOF'
                     set -e
