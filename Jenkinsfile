@@ -53,7 +53,7 @@ pipeline {
                     docker build -t my-backend-app:latest .
                     docker run -d --name my-backend-container -p 3000:3000 --restart unless-stopped my-backend-app:latest
 
-                    echo "✅ Deployment completed"
+                    echo " Deployment completed"
 EOF
                     """
                 }
